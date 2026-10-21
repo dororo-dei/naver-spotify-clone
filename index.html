@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>네이버에서 스포티파이를</title>
-    <!-- css -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- js -->
-     <script src="js/main.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
   </head>
+
   <body>
     <header>
       <!-- 01 - Main Visual -->
@@ -21,6 +24,7 @@
             베이직까지 받기 >
           </p>
         </div>
+
         <div class="heroNav">
           <div class="navLeft">
             <a href="https://shopping.naver.com/ns/home" target="_blank">
@@ -33,14 +37,18 @@
               />
             </a>
           </div>
+
           <div class="navRight">
             <a href="https://nid.naver.com/membership/join">
               <img src="assets/images/membership.png" alt="membership" />
               <p>지금 시작하기</p>
             </a>
-            <button><img src="assets/images/share.png" alt="share" /></button>
+            <button type="button">
+              <img src="assets/images/share.png" alt="share" />
+            </button>
           </div>
         </div>
+
         <div class="heroHeading">
           <img
             src="assets/images/naver _ spotify logo.png"
@@ -52,43 +60,127 @@
             전 세계 수백만 개의 곡을 네이버에서 스포티파이로 즐기세요
           </h3>
         </div>
+
         <div class="heroCtaSection">
           <div class="heroCtaGroup">
             <div class="membershipCard">
-              <p>아직 멤버십 회원이 아니라면?</p>
-              <h3>네이버 멤버십 시작하기</h3>
-              <p>
-                네이버 멤버십 월 4,900원으로 스포티파이 프리미엄 베이직*이 무료
-              </p>
+              <div class="text">
+                <p>아직 멤버십 회원이 아니라면?</p>
+                <h3>네이버 멤버십 시작하기</h3>
+                <p>
+                  네이버 멤버십 월 4,900원으로 <br />
+                  스포티파이 프리미엄 베이직*이 무료
+                </p>
+              </div>
+
+              <a href="#" target="_blank">
+                <img src="assets/images/green button.png" alt="greenBtn" />
+              </a>
             </div>
+
             <div class="spotifyCard">
-              <p>이미 멤버십 회원이라면?</p>
-              <h3>스포티파이 선택하기</h3>
-              <p>
-                디지털 콘텐츠 혜택 중 스포티파이 프리미엄 베이직*으로 음악듣기
-              </p>
+              <div class="text">
+                <p>이미 멤버십 회원이라면?</p>
+                <h3>스포티파이 선택하기</h3>
+                <p>
+                  디지털 콘텐츠 혜택 중<br />
+                  스포티파이 프리미엄 베이직*으로 음악듣기
+                </p>
+              </div>
+
+              <a href="#" target="_blank">
+                <img src="assets/images/green button.png" alt="greenBtn" />
+              </a>
             </div>
           </div>
-          <p>*약관이 적용됩니다.</p>
         </div>
+
+        <p>*약관이 적용됩니다.</p>
       </div>
     </header>
+
     <main>
       <!-- 02 - Introduction -->
       <div id="introduction">
-        
+        <div class="introCard">
+          <div class="introLeft">
+            <div class="text">
+              <p>PLAYLIST</p>
+              <h2>
+                ATEEZ 선공개곡 'Drip'<br />
+                10/23 1PM공개
+              </h2>
+              <p>
+                GOLDEN HOUR의 새로운 챕터,<br />
+                ATEEZ 미니 15집 'GOLDEN HOUL:PART.6'의 문을 여는<br />
+                선공개곡 'Drip'을 스포티파이에서 만나보세요.
+                <br />
+                <br />
+                강렬한 비주얼로 예고된 11월 13일 컴백까지<br />
+                ATINY와 ATEEZ가 만들어갈 골든 아워!<br />
+                <br />
+                ATEEZ의 노래를 스포티파이에서 즐겨보세요.
+              </p>
+            </div>
+
+            <a class="spotify" href="#">
+              <img src="assets/images/spotify icon.png" alt="spotify" />
+              <span>플레이리스트 들으러 가기</span>
+            </a>
+          </div>
+
+          <div class="introRight">
+            <img src="assets/images/ateez.png" alt="음악으로 이어지는 우리" />
+          </div>
+        </div>
+
+        <div class="introBottom">
+          <a href="https://nid.naver.com/membership/join">
+            <img src="assets/images/membership.png" alt="membership" />
+            <p>지금 시작하기</p>
+          </a>
+        </div>
+
+        <div class="introCTA"></div>
       </div>
-      <!-- 03 - Playlist -->
-      <div id="playList"></div>
-      <!-- 04 - Membership -->
-      <div id="membership"></div>
-      <!-- 05 - Service -->
+
+      <!-- 03 - Membership -->
+      <div id="membership">
+        <div class="mb-heading">
+          <h2>Enjoy Spotify on Naver</h2>
+          <p>네이버와 스포티파이가 만나 펼쳐지는 새로운 음악 경험</p>
+        </div>
+        <div class="mb-content">
+          <div class="mb-card">
+            <img src="assets/images/bl-mb.png" alt="bl-mb" />
+            <h2>
+              네이버플러스 멤버십에서는 월 4,900원으로<br />
+              스포티파이 프리미엄 베이직*이 무료!
+            </h2>
+            <button class="startBtn">지금 시작하기</button>
+            <p>*약관이 적용됩니다.</p>
+          </div>
+          <!-- 이미지 삽입 -->
+        </div>
+        <div class="mb-desc">
+          <h3>스포티파이 프리미엄 혜택 ></h3>
+          <p>
+            Premium 베이직 계정 1개 | 광고 없이 수백만 개의 곡 감상 | 다운로드
+            및 무손실 음원 이용 불포함 | 맞춤형 플레이리스트 | 그리고 더 많은
+            혜택
+          </p>
+        </div>
+      </div>
+
+      <!-- 04 - Service -->
       <div id="service"></div>
-      <!-- 06 - FAQ -->
+
+      <!-- 05 - FAQ -->
       <div id="faq"></div>
     </main>
+
     <footer id="footer">
-      <!-- 07 - Footer -->
+      <!-- 06 - Footer -->
     </footer>
   </body>
 </html>

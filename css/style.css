@@ -1,5 +1,6 @@
 /* 01 - Main Visual */
 #mainVisual {
+  padding-bottom: 100px;
   background: linear-gradient(
     to bottom,
     #52fd5b 0%,
@@ -17,6 +18,7 @@
   padding: 16px;
   background-color: #114900;
 }
+
 #mainVisual .topNotice p {
   letter-spacing: -0.45px;
   color: #4efd54;
@@ -28,69 +30,346 @@
 
 /* heroNav */
 #mainVisual .heroNav {
-    padding: 8px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
 }
+
 #mainVisual .heroNav .navLeft {
   display: flex;
   align-items: center;
 }
+
 #mainVisual .heroNav .navRight {
   display: flex;
   gap: 12px;
   align-items: center;
 }
+
 #mainVisual .heroNav .navRight a {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
   color: #fff;
-  /* width: 240px; */
-  /* height: 48px; */
   padding: 10px 15px;
   border-radius: 50px;
   background: linear-gradient(to right, #161d44 0%, #111412 42%, #36875e 100%);
 }
+
 #mainVisual .heroNav .navRight button {
   padding: 5px;
   border-radius: 50px;
   background-color: #111;
 }
+
 /* heroHeading */
 #mainVisual .heroHeading {
   width: 100%;
   height: 290px;
   text-align: center;
 }
+
 #mainVisual .heroHeading img {
   width: 21%;
 }
+
 #mainVisual .heroHeading h1 {
-  letter-spacing: -, 92px;
+  letter-spacing: -0.92px;
   margin-bottom: 22px;
   font-size: 92px;
   font-weight: 800;
   line-height: 110px;
   display: block;
 }
+
 #mainVisual .heroHeading h3 {
   letter-spacing: -0.28px;
   font-size: 28px;
   font-weight: 600;
   line-height: 38px;
 }
+
+/* heroCtaSection */
+#mainVisual .heroCtaSection .heroCtaGroup {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+/* CTA 카드 공통 스타일 */
+#mainVisual .heroCtaSection .heroCtaGroup > div {
+  position: relative;
+  text-align: left;
+  margin: 0 12px;
+  width: 588px;
+  height: 240px;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #111;
+}
+
+.membershipCard,
+.spotifyCard {
+  display: flex;
+}
+
+#mainVisual .heroCtaGroup img {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  width: 52px;
+  height: 52px;
+}
+
+/* CTA 카드 텍스트 영역 */
+#mainVisual .heroCtaGroup .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 상단 안내 문구 */
+#mainVisual .heroCtaGroup .text > p:first-child {
+  letter-spacing: -0.36px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+/* CTA 카드 공통 제목 */
+#mainVisual .heroCtaGroup .text > h3 {
+  letter-spacing: -0.6px;
+  color: #4efd54;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+}
+
+/* CTA 카드 하단 설명 */
+#mainVisual .heroCtaGroup .text > p:last-child {
+  letter-spacing: -0.36px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  margin-top: 49px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+#mainVisual > p {
+  text-align: center;
+  margin-top: 20px;
+  color: #111;
+}
+
 /* 02 - Introduction */
 
-/* 03 - Playlist */
+/* Introduction 전체 영역 */
+#introduction {
+  width: 100%;
+  padding: 100px 20px;
+}
 
-/* 04 - Membership */
+/* 텍스트 + 이미지 카드 */
+#introduction .introCard {
+  display: flex;
+  width: 100%;
+  max-width: 1207px;
+  margin: 50px auto;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
 
-/* 05 - Service */
+/* 왼쪽 텍스트 영역 */
+#introduction .introLeft {
+  flex: 1;
+  min-width: 0;
+  padding: 50px 0 50px 50px;
+}
 
-/* 06 - FAQ */
+#introduction .introLeft .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-/* 07 - Footer */
+#introduction .introLeft .text p:first-child {
+  letter-spacing: -0.6px;
+  color: rgb(135, 31, 66);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+#introduction .introLeft .text h2 {
+  letter-spacing: -1.32px;
+  margin-top: 20px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 59px;
+}
+
+#introduction .introLeft .text p:last-child {
+  letter-spacing: -0.66px;
+  color: rgb(68, 68, 68);
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* 오른쪽 이미지 영역 */
+#introduction .introRight {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 오른쪽 이미지 */
+#introduction .introRight img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 플레이리스트 이동 버튼 */
+#introduction .spotify {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 18px 38px;
+  border-radius: 50px;
+  background-color: #111;
+  font-size: 22px;
+  width: fit-content;
+  letter-spacing: -0.44px;
+  color: rgb(255 255 255);
+  text-decoration: none;
+}
+
+#introduction .spotify img {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+/* 부모 요소 */
+#introduction .introBottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+#introduction .introBottom a {
+  /* width: fit-content; */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    #164428 2%,
+    #111412 11%,
+    #161d44 74%,
+    #1c2366 91%
+  );
+}
+
+/* 03 - Membership */
+#membership {
+  /* background-color: powderblue; */
+}
+
+#membership .mb-heading {
+  display: block;
+  text-align: center;
+}
+
+#membership .mb-heading h2 {
+  letter-spacing: -0.6px;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+}
+
+#membership .mb-heading p {
+  letter-spacing: -0.66px;
+  color: #444;
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+#membership .mb-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 50px 100px;
+  /* background-color: #ddd; */
+}
+
+#membership .mb-content .mb-card {
+  text-align: center;
+  width: 100%;
+  max-width: 1207px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 24px;
+  background-position: -4px -4px;
+  background-repeat: no-repeat;
+  background-size: 100px 30px;
+  background-color: #f5f5f5;
+}
+
+#membership .mb-content h2 {
+  letter-spacing: -0.66px;
+  color: #444;
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+#membership .mb-content .startBtn {
+  letter-spacing: -0.32px;
+  color: #fff;
+  background-color: #111;
+  border-radius: 100px;
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  border: none;
+  margin-top: 20px;
+}
+
+#membership .mb-content p {
+  color: #777;
+  margin-top: 16px;
+}
+
+#membership .mb-desc{
+  margin-top: 50px;
+}
+
+#membership .mb-desc h3{
+  display: block;
+  
+}
+
+/* 04 - Service */
+
+/* 05 - FAQ */
+
+/* 06 - Footer */
