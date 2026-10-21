@@ -1,0 +1,96 @@
+/* 01 - Main Visual */
+#mainVisual {
+  background: linear-gradient(
+    to bottom,
+    #52fd5b 0%,
+    #5dfd61 20%,
+    #7efe83 51%,
+    #8cfd90 72%,
+    #d8fed3 100%
+  );
+}
+
+/* topNotice */
+#mainVisual .topNotice {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  background-color: #114900;
+}
+#mainVisual .topNotice p {
+  letter-spacing: -0.45px;
+  color: #4efd54;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* heroNav */
+#mainVisual .heroNav {
+    padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+#mainVisual .heroNav .navLeft {
+  display: flex;
+  align-items: center;
+}
+#mainVisual .heroNav .navRight {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#mainVisual .heroNav .navRight a {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* width: 240px; */
+  /* height: 48px; */
+  padding: 10px 15px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #161d44 0%, #111412 42%, #36875e 100%);
+}
+#mainVisual .heroNav .navRight button {
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #111;
+}
+/* heroHeading */
+#mainVisual .heroHeading {
+  width: 100%;
+  height: 290px;
+  text-align: center;
+}
+#mainVisual .heroHeading img {
+  width: 21%;
+}
+#mainVisual .heroHeading h1 {
+  letter-spacing: -, 92px;
+  margin-bottom: 22px;
+  font-size: 92px;
+  font-weight: 800;
+  line-height: 110px;
+  display: block;
+}
+#mainVisual .heroHeading h3 {
+  letter-spacing: -0.28px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+/* 02 - Introduction */
+
+/* 03 - Playlist */
+
+/* 04 - Membership */
+
+/* 05 - Service */
+
+/* 06 - FAQ */
+
+/* 07 - Footer */
