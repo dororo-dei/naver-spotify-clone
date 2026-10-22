@@ -10,3 +10,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+ul,
+li {
+  list-style: none;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  background-color: none;
+  border: none;
+}
