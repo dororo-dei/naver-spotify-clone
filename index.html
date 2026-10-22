@@ -8,10 +8,28 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- JS -->
+    <!-- JS: Swiper를 먼저 불러온 뒤 main.js 실행 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="js/main.js" defer></script>
+
+    <!-- 파비콘 -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/imgi_34_favicon.ico"
+    />
   </head>
 
   <body>
@@ -27,10 +45,18 @@
 
         <div class="heroNav">
           <div class="navLeft">
-            <a href="https://shopping.naver.com/ns/home" target="_blank">
+            <a
+              href="https://shopping.naver.com/ns/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="assets/images/back icon.png" alt="back icon" />
             </a>
-            <a href="https://shopping.naver.com/ns/home" target="_blank">
+            <a
+              href="https://shopping.naver.com/ns/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="assets/images/naverstore icon.png"
                 alt="naverstore icon"
@@ -39,7 +65,7 @@
           </div>
 
           <div class="navRight">
-            <a href="https://nid.naver.com/membership/join">
+            <a href="https://nid.naver.com/membership/join" target="_blank">
               <img src="assets/images/membership.png" alt="membership" />
               <p>지금 시작하기</p>
             </a>
@@ -63,7 +89,12 @@
 
         <div class="heroCtaSection">
           <div class="heroCtaGroup">
-            <div class="membershipCard">
+            <a
+              class="membershipCard"
+              href="https://nid.naver.com/membership/join?m=joinAgree&diconFrom=spotify&evt=SPOTIFY&dtm_source=naver_spotify_campaign&dtm_medium=nudge&dtm_campaign=spotify"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="text">
                 <p>아직 멤버십 회원이 아니라면?</p>
                 <h3>네이버 멤버십 시작하기</h3>
@@ -73,12 +104,15 @@
                 </p>
               </div>
 
-              <a href="#" target="_blank">
-                <img src="assets/images/green button.png" alt="greenBtn" />
-              </a>
-            </div>
+              <img src="assets/images/green button.png" alt="" />
+            </a>
 
-            <div class="spotifyCard">
+            <a
+              class="spotifyCard"
+              href="https://nid.naver.com/membership/join?closeParent=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="text">
                 <p>이미 멤버십 회원이라면?</p>
                 <h3>스포티파이 선택하기</h3>
@@ -88,10 +122,8 @@
                 </p>
               </div>
 
-              <a href="#" target="_blank">
-                <img src="assets/images/green button.png" alt="greenBtn" />
-              </a>
-            </div>
+              <img src="assets/images/green button.png" alt="" />
+            </a>
           </div>
         </div>
 
@@ -154,13 +186,22 @@
           <div class="mb-card">
             <img src="assets/images/bl-mb.png" alt="bl-mb" />
             <h2>
-              네이버플러스 멤버십에서는 월 4,900원으로<br />
-              스포티파이 프리미엄 베이직*이 무료!
+              <strong
+                >네이버플러스 멤버십에서는 월 4,900원으로<br />
+                스포티파이 프리미엄 베이직*이 무료!</strong
+              >
             </h2>
-            <button class="startBtn">지금 시작하기</button>
+            <button type="button" class="startBtn">지금 시작하기</button>
             <p>*약관이 적용됩니다.</p>
+            <!-- 영상 삽입 -->
+            <video class="mb-video" autoplay muted loop playsinline>
+              <source
+                src="assets/images/card_naver_plus_membership.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
-          <!-- 이미지 삽입 -->
+
           <div class="mb-desc">
             <h3>스포티파이 프리미엄 혜택 ></h3>
             <p>
@@ -177,41 +218,54 @@
         <!-- 세로 카드 -->
         <div class="mb-benefit">
           <h3>네이버 멤버십의 놀라운 혜택</h3>
-          <ul class="mbCards">
-            <li class="bs1">
-              <img src="assets/images/bs001.png" alt="bs001" />
-            </li>
-            <li class="bs2">
-              <img src="assets/images/bs002.png" alt="bs002" />
-            </li>
-            <li class="bs3">
-              <img src="assets/images/bs003.png" alt="bs003" />
-            </li>
-            <li class="bs4">
-              <img src="assets/images/bs004.png" alt="bs004" />
-            </li>
-            <li class="bs5">
-              <img src="assets/images/bs005.png" alt="bs005" />
-            </li>
-            <li class="bs6">
-              <img src="assets/images/bs006.png" alt="bs006" />
-            </li>
-            <li class="bs7">
-              <img src="assets/images/bs007.png" alt="bs007" />
-            </li>
-            <li class="bs8">
-              <img src="assets/images/bs008.png" alt="bs008" />
-            </li>
-            <li class="bs9">
-              <img src="assets/images/bs009.png" alt="bs009" />
-            </li>
-            <li class="bs10">
-              <img src="assets/images/bs010.png" alt="bs010" />
-            </li>
-            <li class="bs11">
-              <img src="assets/images/bs011.png" alt="bs011" />
-            </li>
-          </ul>
+
+          <div class="swiper benefitSwiper">
+            <ul class="mbCards swiper-wrapper">
+              <li class="bs1 swiper-slide">
+                <img src="assets/images/bs001.png" alt="bs001" />
+              </li>
+              <li class="bs2 swiper-slide">
+                <img src="assets/images/bs002.png" alt="bs002" />
+              </li>
+              <li class="bs3 swiper-slide">
+                <img src="assets/images/bs003.png" alt="bs003" />
+              </li>
+              <li class="bs4 swiper-slide">
+                <img src="assets/images/bs004.png" alt="bs004" />
+              </li>
+              <li class="bs5 swiper-slide">
+                <img src="assets/images/bs005.png" alt="bs005" />
+              </li>
+              <li class="bs6 swiper-slide">
+                <img src="assets/images/bs006.png" alt="bs006" />
+              </li>
+              <li class="bs7 swiper-slide">
+                <img src="assets/images/bs007.png" alt="bs007" />
+              </li>
+              <li class="bs8 swiper-slide">
+                <img src="assets/images/bs008.png" alt="bs008" />
+              </li>
+              <li class="bs9 swiper-slide">
+                <img src="assets/images/bs009.png" alt="bs009" />
+              </li>
+              <li class="bs10 swiper-slide">
+                <img src="assets/images/bs010.png" alt="bs010" />
+              </li>
+              <li class="bs11 swiper-slide">
+                <img src="assets/images/bs011.png" alt="bs011" />
+              </li>
+            </ul>
+          </div>
+
+          <!-- 슬라이더 밖에서 페이지 중앙에 정렬 -->
+          <div class="swiper_btn_box">
+            <button type="button" class="benefit-prev" aria-label="이전 카드">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button type="button" class="benefit-next" aria-label="다음 카드">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
         </div>
         <!-- 가로 카드 -->
         <div class="container">
@@ -232,79 +286,88 @@
         <ul>
           <li class="Q1">
             <button type="button">
-              <p>
+              <span class="question">
                 스포티파이 프리미엄 베이직 요금제는 추가 비용없이 이용할 수
                 있나요?
-              </p>
-              <span>+</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
           <li class="Q2">
             <button type="button">
-              <p>멤버십 혜택으로 스포티파이 음악을 광고 없이 들을 수 있나요?</p>
-              <span>+</span>
+              <span class="question">
+                멤버십 혜택으로 스포티파이 음악을 광고 없이 들을 수 있나요?
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
-          <li class="Q3" type="button">
+          <li class="Q3">
             <button type="button">
-              <p>
+              <span class="question">
                 네이버 멤버십 혜택으로 스포티파이 프리미엄 베이직을 이용하려면
                 어떻게 해야 하나요?
-              </p>
-              <span>+</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
-          <li class="Q4" type="button">
+          <li class="Q4">
             <button type="button">
-              <p>
+              <span class="question">
                 다른 콘텐츠를 이용하고 있어요. 스포티파이 프리미엄 베이직을
                 중복으로 이용할 방법은 없나요?
-              </p>
-              <span>+</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
-          <li class="Q5" type="button">
+          <li class="Q5">
             <button type="button">
-              <p>
+              <span class="question">
                 스튜던트 멤버십 회원도 스포티파이 프리미엄 베이직을 이용할 수
                 있나요?
-              </p>
-              <span>+</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
-          <li class="Q6" type="button">
+          <li class="Q6">
             <button type="button">
-              <p>
+              <span class="question">
                 패밀리 멤버도 스포티파이 프리미엄 베이직을 이용할 수 있나요?
-              </p>
-              <span>+</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
-          <li class="Q7" type="button">
-            <button>
-              <p>꼭 알아주세요.</p>
-              <span>+</span>
+          <li class="Q7">
+            <button type="button">
+              <span class="question">꼭 알아주세요.</span>
+              <span class="plus" aria-hidden="true">+</span>
             </button>
           </li>
         </ul>
         <div class="faqBottom">
           <p>본 제안은 Spotify Premium Basic에 적용됩니다.</p>
-          <button type="button">약관 알아보기 ></button>
+          <button type="button">
+            <a
+              href="https://www.spotify.com/kr-ko/legal/paid-subscription-terms/"
+              target="_blank"
+              >약관 알아보기</a
+            >
+            >
+          </button>
         </div>
       </div>
     </main>
 
     <footer id="footer">
       <!-- 06 - Footer -->
-      <a href="#mainVisual"
-        ><img src="assets/images/Arrow up.png" alt="arrowUp" />
+      <a href="#mainVisual">
+        <img src="assets/images/Arrow up.png" alt="arrowUp" />
       </a>
       <div class="ftBottom">
         <img src="assets/images/naverLogo.png" alt="naverLogo" />
         <div class="adress">
           <p>경기도 성남시 분당구 정자일로 95, NAVER 1784</p>
           <span>|</span>
-          <button>온라인 고객센터</button>
+          <button type="button">온라인 고객센터</button>
         </div>
         <div class="corp">
           <p>© NAVER Corp. All Rights Reserved.</p>

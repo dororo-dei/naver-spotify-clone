@@ -1,3 +1,10 @@
+=/* 너비에 padding과 border를 포함하여 가로 넘침 방지 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* 01 - Main Visual */
 #mainVisual {
   padding-bottom: 100px;
@@ -101,8 +108,9 @@
 }
 
 /* CTA 카드 공통 스타일 */
-#mainVisual .heroCtaSection .heroCtaGroup > div {
+#mainVisual .heroCtaSection .heroCtaGroup > a {
   position: relative;
+  display: flex;
   text-align: left;
   margin: 0 12px;
   width: 588px;
@@ -110,6 +118,8 @@
   padding: 30px;
   border-radius: 30px;
   background-color: #111;
+  color: #fff;
+  text-decoration: none;
 }
 
 .membershipCard,
@@ -319,29 +329,16 @@
   width: 100%;
   height: 100%;
   padding: 50px 100px;
-  background-color: #ddd/;
-}
-
-#membership .mb-content .mb-card {
-  text-align: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 50px;
-  border-radius: 24px;
-  background-position: -4px -4px;
-  background-repeat: no-repeat;
-  background-size: 100px 30px;
-  background-color: #f5f5f5;
+  /* background-color: #ddd; */
 }
 
 #membership .mb-content h2 {
   letter-spacing: -0.66px;
   color: #444;
   margin-top: 24px;
-  font-size: 22px;
+  font-size: 44px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 45px;
 }
 
 #membership .mb-content .startBtn {
@@ -362,7 +359,50 @@
   margin-top: 16px;
 }
 
+/* 영상과 콘텐츠를 겹칠 카드 */
+#membership .mb-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 600px;
+  padding: 60px 24px;
+  overflow: hidden;
+  border-radius: 24px;
+  text-align: center;
+}
+
+/* 로고, 제목, 버튼, 안내 문구를 영상 위에 표시 */
+#membership .mb-card > :not(.mb-video) {
+  position: relative;
+  z-index: 1;
+}
+
+#membership .mb-card > img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 멤버십 소개 영상 */
+#membership .mb-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
 #membership .mb-desc {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
   text-align: left;
 }
 
@@ -374,6 +414,7 @@
 #service {
   /* background-color: powderblue; */
 }
+
 /* 세로카드 */
 #service .mb-benefit h3 {
   text-align: center;
@@ -382,10 +423,78 @@
   margin-top: 150px;
   margin-bottom: 50px;
 }
-#service .mb-benefit ul {
+
+/* 왼쪽은 콘텐츠 기준선, 오른쪽은 화면 끝까지 */
+#service .benefitSwiper {
+  width: auto;
+  max-width: none;
+  margin-left: max(20px, calc((100% - 1200px) / 2));
+  margin-right: 0;
+  overflow: hidden;
+}
+
+/* 카드들을 담는 영역 */
+#service .mbCards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 개별 카드 */
+#service .mbCards > .swiper-slide {
+  width: 405px;
+  height: 596px;
+}
+
+/* 카드 이미지 */
+#service .mbCards > .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 카드 아래 버튼 박스 */
+#service .mb-benefit > .swiper_btn_box {
   display: flex;
-  gap: 1%;
-  margin: 0 320px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 40px 0 0;
+}
+
+/* 이전·다음 버튼 공통 */
+#service .swiper_btn_box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e5e7;
+  color: #777;
+  cursor: pointer;
+}
+
+/* 화살표 */
+#service .swiper_btn_box button span {
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* 처음·마지막에서 이동할 수 없는 버튼 */
+#service .swiper_btn_box button.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* 키보드로 선택했을 때 */
+#service .swiper_btn_box button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
 }
 
 /* 가로카드 */
@@ -400,6 +509,12 @@
 #service .container .howTo .search {
   margin-bottom: 2%;
   max-width: 1200px;
+}
+
+#service .container .howTo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* 05 - FAQ */
@@ -429,7 +544,7 @@
   border-top: 1px solid #ddd;
 }
 
-#faq ul li p {
+#faq ul li .question {
   font-weight: bold;
 }
 
@@ -457,7 +572,7 @@
 }
 
 /* 질문 텍스트 */
-#faq ul li button p {
+#faq ul li button .question {
   flex: 1;
   min-width: 0;
   margin: 0;
@@ -465,9 +580,12 @@
 }
 
 /* 플러스 기호 */
-#faq ul li button span {
+#faq ul li button .plus {
   display: block;
-  flex-shrink: 0;
+  flex: 0 0 24px;
+  width: 24px;
+  text-align: center;
+  font-size: 28px;
   position: static;
   margin: 0;
   padding: 0;
@@ -479,11 +597,11 @@
   width: 100%;
   max-width: 1200px;
   margin: 20px auto 0;
-  padding: 24px;
+  padding: 24px 0;
 }
 
 /* FAQ 하단 안내 문구 */
-#faq > p {
+#faq .faqBottom > p {
   width: 100%;
   max-width: 1200px;
   margin: 20px auto 0;
@@ -492,17 +610,18 @@
 }
 
 /* FAQ 하단 약관 버튼 */
-#faq > button {
+#faq .faqBottom > button {
   display: block;
-  width: calc(100% - 40px);
-  max-width: 1160px;
-  margin: 12px auto 0;
+  width: fit-content;
+  max-width: 100%;
+  margin: 12px 0 0;
   text-align: left;
   font-size: 14px;
 }
 
 #faq .faqBottom > button {
   margin-top: 20px;
+  margin-left: 10px;
   border-radius: 20px;
   padding: 10px 20px;
   background-color: #eee;
@@ -526,7 +645,7 @@
 }
 
 #footer .adress p {
-  color: #99;
+  color: #999;
 }
 
 #footer .adress span {
