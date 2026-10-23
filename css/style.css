@@ -1,12 +1,109 @@
-=/* 너비에 padding과 border를 포함하여 가로 넘침 방지 */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* topNotice */
+.topNotice {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  background-color: #114900;
+}
+
+.topNotice p {
+  display: block;
+  letter-spacing: -0.45px;
+  color: #4efd54;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* heroNav */
+.heroNav {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.heroNav .navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.heroNav .navRight {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.heroNav .navRight a {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #161d44 0%, #111412 42%, #36875e 100%);
+}
+
+.heroNav .navRight button {
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #111;
+}
+
+/* 공유하기 버튼 */
+#hdShare {
+  width: 100%;
+  max-width: 287px;
+  padding-bottom: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  letter-spacing: -1.5px;
+  line-height: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 0 6px 0 rgba(0, 0, 0, 0.15),
+    0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hdShare h2 {
+  display: block;
+  padding: 25px 0 21px;
+  color: #000;
+  font-size: 19px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#hdShare .iconBtn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 10px;
+  padding: 10px;
+  font-size: 13px;
+  margin: 0 0 16px;
+  color: #737373;
+}
+
+#hdShare .iconBtn .ss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hdShare .iconBtn a img {
+  width: 40px;
+  height: 40px;
 }
 
 /* 01 - Main Visual */
-#mainVisual {
+.mainVisual {
   padding-bottom: 100px;
   background: linear-gradient(
     to bottom,
@@ -18,72 +115,18 @@
   );
 }
 
-/* topNotice */
-#mainVisual .topNotice {
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-  background-color: #114900;
-}
-
-#mainVisual .topNotice p {
-  letter-spacing: -0.45px;
-  color: #4efd54;
-  vertical-align: middle;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-/* heroNav */
-#mainVisual .heroNav {
-  padding: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-#mainVisual .heroNav .navLeft {
-  display: flex;
-  align-items: center;
-}
-
-#mainVisual .heroNav .navRight {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-#mainVisual .heroNav .navRight a {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 50px;
-  background: linear-gradient(to right, #161d44 0%, #111412 42%, #36875e 100%);
-}
-
-#mainVisual .heroNav .navRight button {
-  padding: 5px;
-  border-radius: 50px;
-  background-color: #111;
-}
-
 /* heroHeading */
-#mainVisual .heroHeading {
+.mainVisual .heroHeading {
   width: 100%;
   height: 290px;
   text-align: center;
 }
 
-#mainVisual .heroHeading img {
+.mainVisual .heroHeading img {
   width: 21%;
 }
 
-#mainVisual .heroHeading h1 {
+.mainVisual .heroHeading h1 {
   letter-spacing: -0.92px;
   margin-bottom: 22px;
   font-size: 92px;
@@ -92,7 +135,7 @@
   display: block;
 }
 
-#mainVisual .heroHeading h3 {
+.mainVisual .heroHeading h3 {
   letter-spacing: -0.28px;
   font-size: 28px;
   font-weight: 600;
@@ -100,7 +143,7 @@
 }
 
 /* heroCtaSection */
-#mainVisual .heroCtaSection .heroCtaGroup {
+.mainVisual .heroCtaSection .heroCtaGroup {
   display: flex;
   justify-content: center;
   color: #fff;
@@ -108,7 +151,7 @@
 }
 
 /* CTA 카드 공통 스타일 */
-#mainVisual .heroCtaSection .heroCtaGroup > a {
+.mainVisual .heroCtaSection .heroCtaGroup > a {
   position: relative;
   display: flex;
   text-align: left;
@@ -127,7 +170,7 @@
   display: flex;
 }
 
-#mainVisual .heroCtaGroup img {
+.mainVisual .heroCtaGroup img {
   position: absolute;
   top: 27px;
   right: 27px;
@@ -136,14 +179,14 @@
 }
 
 /* CTA 카드 텍스트 영역 */
-#mainVisual .heroCtaGroup .text {
+.mainVisual .heroCtaGroup .text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 /* 상단 안내 문구 */
-#mainVisual .heroCtaGroup .text > p:first-child {
+.mainVisual .heroCtaGroup .text > p:first-child {
   letter-spacing: -0.36px;
   margin-bottom: 8px;
   font-size: 18px;
@@ -152,7 +195,7 @@
 }
 
 /* CTA 카드 공통 제목 */
-#mainVisual .heroCtaGroup .text > h3 {
+.mainVisual .heroCtaGroup .text > h3 {
   letter-spacing: -0.6px;
   color: #4efd54;
   font-size: 30px;
@@ -161,7 +204,7 @@
 }
 
 /* CTA 카드 하단 설명 */
-#mainVisual .heroCtaGroup .text > p:last-child {
+.mainVisual .heroCtaGroup .text > p:last-child {
   letter-spacing: -0.36px;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -171,7 +214,7 @@
   line-height: 25px;
 }
 
-#mainVisual > p {
+.mainVisual > p {
   text-align: center;
   margin-top: 20px;
   color: #111;
@@ -498,23 +541,58 @@
 }
 
 /* 가로카드 */
-#service .container {
-  box-sizing: border-box;
+.container {
   width: 100%;
-  max-width: 1280px;
-  margin: 300px auto;
-  padding: 0 40px;
-}
-
-#service .container .howTo .search {
-  margin-bottom: 2%;
   max-width: 1200px;
+  margin: 150px auto;
 }
 
-#service .container .howTo img {
-  display: block;
-  width: 100%;
-  height: auto;
+.container .howTo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container .howTo li video {
+  border-radius: 30px;
+}
+
+.container .howTo .search {
+  position: relative;
+}
+
+.container .howTo .search .searchSection {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.container .howTo .search .searchSection h3 {
+  margin-top: 30px;
+  letter-spacing: -1.32px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 59px;
+  color: #fff;
+}
+
+.container .howTo .map {
+  position: relative;
+}
+
+.container .howTo .map .mapSection {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+}
+
+.container .howTo .map .mapSection h3 {
+  margin-top: 30px;
+  letter-spacing: -1.32px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 59px;
+  color: #000;
 }
 
 /* 05 - FAQ */
