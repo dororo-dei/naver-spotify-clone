@@ -405,11 +405,14 @@
         </div>
       </div>
     </footer>
-    
+
     <div id="hdShare">
       <h2>공유하기</h2>
-      <div class="iconBtn">
+      <button class="close" aria-label="공유창 닫기">
+        <span></span> <span></span>
+      </button>
 
+      <div class="iconBtn">
         <div class="ss">
           <a href="#">
             <img src="assets/images/sp_spi_layer 1.png" alt="blogIcon" />
@@ -488,12 +491,15 @@
         </div>
       </div>
       <!-- url 복사 버튼 / 문자는 텍스트-->
-      <button class="urlBtn">
-        <a href="https://naver.me/GKbXpiIG">
-          <p>https://naver.me/GKbXpiIG</p>
-          <span>URL복사</span>
-        </a>
-      </button>
+      <div class="urlBox">
+        <input
+          type="text"
+          class="shareUrl"
+          aria-label="https://naver.me/GKbXpiIG"
+          readonly
+        />
+        <button type="button" class="copyUrlBtn">URL복사</button>
+      </div>
     </div>
   </body>
 </html>
